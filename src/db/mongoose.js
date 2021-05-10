@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-const url =
-	"mongodb+srv://demoadmin:mernpractice@mernstackdemo.ew6v9.mongodb.net/adminapi?retryWrites=true&w=majority";
+require("dotenv").config();
+const url = process.env.MONGODB_URL;
 
 mongoose.connect(url, {
 	useNewUrlParser: true,
